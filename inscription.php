@@ -6,17 +6,23 @@ include "db.php";
 <head>
   <meta charset="utf-8" />
   <title>inscription</title>
+  <link rel="stylesheet" href="style.css" media="screen" title="no title">
+
 </head>
 <body>
-  <h2>Se connecter !</h2>
+  <div class="container">
+
+  <h2>Inscription</h2>
   <form method="POST" action="" enctype='multipart/form-data'>
-    <input type="text" name="nom" value="<?php echo $_POST['nom'];?>" placeholder="Votre identifiant" /><br />
-    <input type="email" name="mail" value="<?php echo $_POST['mail'];?>" placeholder="Votre email" /><br />
-    <input type="number" name="age" value="<?php echo $_POST['age'];?>" placeholder="Votre age" /><br />
-    <input type="password" name="pass" placeholder="votre mote de passe" /><br /><br />
-    <input type="password" name="pass2" placeholder="votre mote de passe" /><br /><br />
-    <input type="submit"  name="inscription" value="inscription" />
+    <input type="text" name="nom" value="" placeholder="Votre identifiant" /><br />
+    <input type="email" name="mail" value="" placeholder="Votre email" /><br />
+    <input type="number" name="age" value="" placeholder="Votre age" /><br />
+    <input type="password" name="pass" placeholder="votre mote de passe" /><br />
+    <input type="password" name="pass2" placeholder="votre mote de passe" /><br />
+    <input type="submit"  name="inscription" value="Inscription" class="submit" />
   </form>
+  
+</div>
 </body>
 </html>
 <?php

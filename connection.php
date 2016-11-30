@@ -13,23 +13,28 @@ include "db.php";
   <div class="container">
 
 
-    <h2>Se connecter !</h2>
+    <h2>Se connecter </h2>
     <form method="POST" action="">
       <input type="email" name="mailconnect" value="" placeholder="Votre email" /><br /><br />
       <input type="password" name="passconnect" placeholder="votre mote de passe" /><br /><br />
-      <input type="submit"  name="connecter" value="connecter" />
-      <button type="button" name="button"><a href="inscription.php">Inscription</a></button>
+      <input type="submit"  name="connecter" value="Connection" />
+      <input type="submit"  name="inscription" value="Inscription" />
     </form>
   </div>
 </body>
 </html>
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 // if someone is connected redirect to connected page
 if($_SESSION){
   echo "<h2>Vous etes Connecté en tant que ".$_SESSION['nom']."</h2>";
   header("refresh:3; url=connected.php");
 }
+if(isset($_POST['inscription'])){
+  header ("Location: inscription.php");
 
+}
 if(isset($_POST['connecter'])){
   $_SESSION['last_login_timestamp']= time();
 

@@ -16,6 +16,8 @@ if(isset($_SESSION)){
   <meta http-equiv="refresh" content="61" >
   <meta charset="utf-8">
   <title>Profile</title>
+  <link rel="stylesheet" href="style.css" media="screen" title="no title">
+
 </head>
 <body>
   <?php
